@@ -1,4 +1,37 @@
 # Python Programming
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Python Programming](#python-programming)
+  - [Course Overview and Installs](#course-overview-and-installs)
+    - [Python 2 vs Python 3](#python-2-vs-python-3)
+    - [Python Overview](#python-overview)
+    - [Command Line Crash Course](#command-line-crash-course)
+      - [Windows Command Line](#windows-command-line)
+      - [macOS Command Line](#macos-command-line)
+    - [Installing Python](#installing-python)
+    - [Test driving Anaconda](#test-driving-anaconda)
+    - [Running Python Code](#running-python-code)
+  - [Python Object and Data Structure Basics](#python-object-and-data-structure-basics)
+    - [Basic Data Types](#basic-data-types)
+    - [Numbers](#numbers)
+      - [Numbers - FAQ](#numbers---faq)
+    - [Variable Assignments](#variable-assignments)
+    - [Strings](#strings)
+      - [String Formatting for Printing](#string-formatting-for-printing)
+      - [Strings FAQ](#strings-faq)
+      - [Print Formatting FAQS](#print-formatting-faqs)
+    - [Lists](#lists)
+    - [Dictionaries](#dictionaries)
+    - [Tuples](#tuples)
+    - [Sets](#sets)
+    - [Booleans](#booleans)
+    - [Files](#files)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 
 ## Course Overview and Installs
 
