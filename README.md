@@ -33,7 +33,7 @@
 
 
 
-## Course Overview and Installs
+## Course Overview and Installations
 
 ### Python 2 vs Python 3
 
@@ -387,6 +387,28 @@ start a new notebook to regain the old functionality back.
 
 [HERE](https://pyformat.info/) IS AN AWESOME SOURCE FOR PRINT FORMATTING:
 
+#### Exercises
+1. Write a string index that returns just the letter 'r'  from 'Hello World' .
+
+For example, 'Hello World'[0]  returns 'H'
+
+2. Use string slicing to grab the word 'ink'  from inside 'tinker'
+
+For example, 'education'[3:6]  returns 'cat'
+
+Remember that when slicing you only go up to but not including the end index.
+
+3. Write an expression using any of the string formatting methods we have learned (except f-strings, see note below) to return the phrase 'Python rules!'
+
+For example, these phrases both return 'I like apples' :
+
+```
+'I like %s' %'apples'
+'I like {}'.format('apples')
+```
+
+
+
 ### Lists
 
 - Lists are ordered sequences that can hold a variety of object types.
@@ -397,6 +419,15 @@ start a new notebook to regain the old functionality back.
 
 - Refer to the
   notebook: `code/00-Python Object and Data Structure Basics/04-Lists.ipynb`
+
+#### Exercises
+1. Create a list that contains at least one string, one integer and one float.
+
+For example:
+
+[1, 'two', 3.14159]
+
+Note that the order and number of items doesn't matter.
 
 ### Dictionaries
 
@@ -421,6 +452,14 @@ __So when to choose a list and when to choose a dictionary?__
 - Refer to the notebook
   at: `code/00-Python Object and Data Structure Basics/05-Dictionaries.ipynb`
 
+#### Exercises
+1. Create a dictionary where all the keys are strings, and all the values are integers.
+
+For example:
+
+{'Monday':19, 'Tuesday':20}
+
+
 ### Tuples
 
 - Tuples are very similar to lists. However they have one key difference -
@@ -438,6 +477,15 @@ __So when to choose a list and when to choose a dictionary?__
 - Refer to the notebook
   at: `code/00-Python Object and Data Structure Basics/07-Sets and Booleans.ipynb`
 
+#### Exercises
+1. Write an expression that would turn the string 'Mississippi'  into a set of unique letters.
+
+For example:
+
+set('Parallel')
+
+would return the set {'P', 'a', 'e', 'l', 'r'}
+
 ### Booleans
 
 - Booleans are operators that allow you to convey True or False statements.
@@ -452,3 +500,124 @@ __So when to choose a list and when to choose a dictionary?__
 - We’ll also discuss file paths on your computer
 - Refer to the notebook
   at: `code/00-Python Object and Data Structure Basics/08-Files.ipynb`
+
+#### Exercises
+1. This exercise will require several lines of code.
+
+Write a script that opens a file named 'test.txt' , writes 'Hello World'  to the file, then closes it.
+
+For example, the following code opens a file called 'myfile.txt' , writes 'This is my file' , and closes it:
+
+```
+x = open('myfile.txt', 'w')
+x.write('This is my file')
+x.close()
+```
+
+## Python Comparison Operators
+Refer to the notebooks at: `code/01-Python Comparison Operators`
+
+## Python Statements
+### If, elif , else Statements
+
+- Let’s begin to learn about __control flow__.
+- We often only want certain code to execute when a particular condition has been met.
+- For example, `if`  my dog is hungry (some condition), then I will feed the dog (some action).
+- To control this flow of logic we use some keywords:
+  - if
+  - elif
+  - else
+
+- Control Flow syntax makes use of colons and indentation (whitespace).
+
+- This indentation system is crucial to Python and is what sets it apart from other programming languages.
+
+- Syntax of an if statement
+
+```
+if some_condition:
+  # execute some code
+```
+
+- Syntax of an if/else statement
+```
+if some_condition:
+  # execute some code
+else:
+  # do something else
+
+```
+
+
+- Syntax of an if/else statement
+
+```
+if some_condition:
+  # execute some code
+elif some_other_condition:
+  # do something different
+else:
+  # do something else
+```
+
+- Refer to the Notebook:
+  - `code/02-Python Statements/01-Introduction to Python Statements.ipynb`
+  - `code/02-Python Statements/02-if, elif, and else Statements.ipynb`
+
+### For Loops
+- Many objects in Python are “iterable”, meaning we can iterate over every element in the object.
+- Such as every element in a list or every character in a string.
+- We can use for loops to execute a block of code for every iteration.
+- The term iterable means you can “iterate” over the object.
+- For example you can iterate over every character in a string, iterate over every item in a list, iterate over every key in a dictionary.
+- Syntax of a for loop
+```
+my_iterable = [1,2,3]
+for item_name in my_iterable:
+  print(item_name)
+```
+Outputs:
+```
+>> 1
+>> 2
+>> 3
+```
+
+- Refer to the Notebook: `code/02-Python Statements/03-for Loops.ipynb`
+
+### While Loops
+- While loops will continue to execute a block of code `while` some condition remains True.
+- For example, `while` my pool is not full, keep filling my pool with water.
+- Or `while` my dogs are still hungry, keep feeding my dogs.
+- Syntax of a while loop
+```
+while some_boolean_condition:
+  #do something
+```
+
+- You can combine with an else if you want
+```
+while some_boolean_condition:
+  #do something
+else:
+	#do something different
+```
+
+- Refer to the Notebook: `code/02-Python Statements/04-while Loops.ipynb`
+
+### Useful Operators
+- Refer to the Notebook: `code/02-Python Statements/05-Useful-Operators.ipynb`
+
+### List Comprehensions
+- List Comprehensions are a unique way of quickly creating a list with Python.
+- If you find yourself using a for loop along with .append() to create a list, List Comprehensions are a good alternative!
+- Refer to the Notebook: `code/02-Python Statements/06-List Comprehensions.ipynb`
+
+### Assessment
+- Refer to the Notebook `code/02-Python Statements/07-Statements Assessment Test.ipynb` for the test.
+- The solutions for the assessment is in the Notebook `08-Statements Assessment Test - Solutions.ipynb`. Before you refer to the solutions, take some time to answer the questions.
+- Only refer to the solutions if you're blocked or have completed the assessment.
+
+## Methods and Functions
+- Built-in objects in Python have a variety of methods you can use!
+- Let’s explore in a bit more detail how to find methods and how to get information about them.
