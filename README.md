@@ -3,44 +3,52 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Course Overview and Installations](#course-overview-and-installations)
-  - [Python 2 vs Python 3](#python-2-vs-python-3)
-  - [Python Overview](#python-overview)
-  - [Command Line Crash Course](#command-line-crash-course)
-    - [Windows Command Line](#windows-command-line)
-    - [macOS Command Line](#macos-command-line)
-  - [Installing Python](#installing-python)
-  - [Test driving Anaconda](#test-driving-anaconda)
-  - [Running Python Code](#running-python-code)
-- [Python Object and Data Structure Basics](#python-object-and-data-structure-basics)
-  - [Basic Data Types](#basic-data-types)
-  - [Numbers](#numbers)
-    - [Numbers - FAQ](#numbers---faq)
-  - [Variable Assignments](#variable-assignments)
-  - [Strings](#strings)
-    - [String Formatting for Printing](#string-formatting-for-printing)
-    - [Strings FAQ](#strings-faq)
-    - [Print Formatting FAQS](#print-formatting-faqs)
-    - [Exercises](#exercises)
-  - [Lists](#lists)
-    - [Exercises](#exercises-1)
-  - [Dictionaries](#dictionaries)
-    - [Exercises](#exercises-2)
-  - [Tuples](#tuples)
-  - [Sets](#sets)
-    - [Exercises](#exercises-3)
-  - [Booleans](#booleans)
-  - [Files](#files)
-    - [Exercises](#exercises-4)
-- [Python Comparison Operators](#python-comparison-operators)
-- [Python Statements](#python-statements)
-  - [If, elif , else Statements](#if-elif--else-statements)
-  - [For Loops](#for-loops)
-  - [While Loops](#while-loops)
-  - [Useful Operators](#useful-operators)
-  - [List Comprehensions](#list-comprehensions)
-  - [Assessment](#assessment)
-- [Methods and Functions](#methods-and-functions)
+- [Python Programming](#python-programming)
+  - [Course Overview and Installations](#course-overview-and-installations)
+    - [Python 2 vs Python 3](#python-2-vs-python-3)
+    - [Python Overview](#python-overview)
+    - [Command Line Crash Course](#command-line-crash-course)
+      - [Windows Command Line](#windows-command-line)
+      - [macOS Command Line](#macos-command-line)
+    - [Installing Python](#installing-python)
+    - [Test driving Anaconda](#test-driving-anaconda)
+    - [Running Python Code](#running-python-code)
+  - [Python Object and Data Structure Basics](#python-object-and-data-structure-basics)
+    - [Basic Data Types](#basic-data-types)
+    - [Numbers](#numbers)
+      - [Numbers - FAQ](#numbers---faq)
+    - [Variable Assignments](#variable-assignments)
+    - [Strings](#strings)
+      - [String Formatting for Printing](#string-formatting-for-printing)
+      - [Strings FAQ](#strings-faq)
+      - [Print Formatting FAQS](#print-formatting-faqs)
+      - [Exercises](#exercises)
+    - [Lists](#lists)
+      - [Exercises](#exercises-1)
+    - [Dictionaries](#dictionaries)
+      - [Exercises](#exercises-2)
+    - [Tuples](#tuples)
+    - [Sets](#sets)
+      - [Exercises](#exercises-3)
+    - [Booleans](#booleans)
+    - [Files](#files)
+      - [Exercises](#exercises-4)
+  - [Python Comparison Operators](#python-comparison-operators)
+  - [Python Statements](#python-statements)
+    - [If, elif , else Statements](#if-elif--else-statements)
+    - [For Loops](#for-loops)
+    - [While Loops](#while-loops)
+    - [Useful Operators](#useful-operators)
+    - [List Comprehensions](#list-comprehensions)
+    - [Assessment](#assessment)
+  - [Methods and Functions](#methods-and-functions)
+    - [Methods](#methods)
+    - [Functions](#functions)
+    - [def Keyword](#def-keyword)
+    - [Basics of Python Functions](#basics-of-python-functions)
+    - [Logic with Python Functions](#logic-with-python-functions)
+    - [Tuple Unpacking with Python Functions](#tuple-unpacking-with-python-functions)
+    - [Interactions between Python Functions](#interactions-between-python-functions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -632,5 +640,50 @@ else:
 - Only refer to the solutions if you're blocked or have completed the assessment.
 
 ## Methods and Functions
+### Methods
 - Built-in objects in Python have a variety of methods you can use!
 - Let’s explore in a bit more detail how to find methods and how to get information about them.
+- Refer tot he Notebook in `code/03-Methods and Functions/01-Methods.ipynb`
+
+### Functions
+- Creating clean repeatable code is a key part of becoming an effective programmer.
+- Functions allow us to create blocks of code that can be easily executed many times, without needing to constantly rewrite the entire block of code.
+- Functions will be a huge leap forward in your capabilities as a Python programmer.
+- This means that the problems you are able to solve can also be a lot harder!
+- It is very important to get practice combining everything you’ve learned so far (control flow, loops, etc.) with functions to become an effective programmer.
+### def Keyword
+- Creating a function requires a very specific syntax, including the def keyword, correct indentation, and proper structure.
+- Let’s get an overview of a Python function structure.
+
+```
+def name_of_function():
+```
+
+- Typically we use the return keyword to send back the result of the function, instead of just printing it out.
+- **return** allows us to assign the output of the function to a new variable. 
+- We will have a deeper discussion of the return keyword later on in the notebook.
+```
+def add_function(num1,num2):
+  return num1+num2
+```
+Outputs:
+```
+>> result = add_function(1,2)
+>> 
+>> print(result)
+>> 3
+```
+
+### Basics of Python Functions
+- Refer to the Notebook: `code/03-Methods and Functions/02-Functions.ipynb`
+
+### Logic with Python Functions
+- Refer to the Notebook: `code/03-Methods and Functions/02-Functions.ipynb`
+
+### Tuple Unpacking with Python Functions
+- Refer to the Notebook: `code/03-Methods and Functions/02-Functions.ipynb`
+
+### Interactions between Python Functions
+- Refer to the Notebook: `code/03-Methods and Functions/02-Functions.ipynb`
+
+
