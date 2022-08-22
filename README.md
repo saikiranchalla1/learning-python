@@ -53,6 +53,12 @@
     - [Exercises:](#exercises-5)
   - [Object Oriented Programming](#object-oriented-programming)
     - [Exercise](#exercise)
+  - [Modules and Packages](#modules-and-packages)
+    - [Using PyPi With pip install](#using-pypi-with-pip-install)
+    - [Writing Your Own Modules and Packages](#writing-your-own-modules-and-packages)
+    - [__name__ and __main__](#name-and-main)
+  - [Errors and Exception Handling](#errors-and-exception-handling)
+    - [Unit Testing](#unit-testing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -762,5 +768,54 @@ class NameOfClass():
 
 
 
+## Modules and Packages
+### Using PyPi With pip install
+- `PyPI` is a repository for open-source third-party Python packages. 
+- It's similar to RubyGems in the Ruby world, PHP's Packagist, CPAN for Perl, and NPM for Node.js.
+- So far we’ve really only used libraries that come internally with Python.
+- There are many other libraries available that people have open-sourced and shared on `PyPi`.
+- We can use `pip install` at the command line to install these packages. 
+- By installing Python from python.org or through the Anaconda distribution you also installed pip
+- `pip` is a simple way to download packages at your command line directly from the PyPi repository
+- There are packages already created for almost any use case you can think of!
+- A quick google search will usually help you discover a link to the PyPi page for the package, or for the package documentation.
+- Let’s quickly show you how to download and install external packages.
+  - Windows Users: Command Prompt
+  - MacOS/Linux Users: Terminal
 
+### Writing Your Own Modules and Packages
+- Now that we understand how to install external packages, let’s explore how to create our own modules and packages. 
+- Modules are just .py scripts that you call in another .py script.
+- Packages are a collection of modules.
 
+### __name__ and __main__
+- An often confusing part of Python is a mysterious line of code:
+```python
+if __name__ == "__main__":
+```
+
+- Sometimes when you are importing from a module, you would like to know whether a modules function is being used as an import, or if you are using the original .py file of that module.
+- Let’s explore this some more, but make sure to check out the full explanatory text file that is in this part’s folder!
+
+## Errors and Exception Handling
+- Errors are bound to happen in your code! 
+- Especially when someone else ends up using it in an unexpected way.
+- We can use error handling to attempt to plan for possible errors.
+- For example, a user may try to write to a file that was only opened in mode=’r’
+- Currently if there is any type of error in your code, the entire script will stop.
+- We can use Error Handling to let the script continue with other code, even if there is an error.
+- We use three keywords for this:
+  - `try`: This is the block of code to be attempted (may lead to an error)
+  - `except`: Block of code will execute in case there is an error in try block
+  - `finally`: A final block of code to be executed, regardless of an error.
+
+### Unit Testing
+- As you begin to expand to larger multi-file projects it becomes important to have tests in place.
+- This way as you make changes or update your code, you can run your test files to make sure previous code still runs as expected.
+- There are several testing tools, we will focus on two:
+  - `pylint`: This is a library that looks at your code and reports back possible issues.
+  - `unittest`: This built-in library will allow to test your own programs and check you are getting desired outputs.
+- We’ll begin by showing you how to use pylint to check your code for possible errors and styling. 
+- Python as a set of style convention rules known as “PEP 8”.
+- For this lecture we will be creating .py scripts in sublime.
+- You can still use the associated notebook for code using the %%writefile magic jupyter command.
