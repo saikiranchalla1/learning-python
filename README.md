@@ -49,6 +49,10 @@
     - [Logic with Python Functions](#logic-with-python-functions)
     - [Tuple Unpacking with Python Functions](#tuple-unpacking-with-python-functions)
     - [Interactions between Python Functions](#interactions-between-python-functions)
+    - [*args and **kwargs in Python](#args-and-kwargs-in-python)
+    - [Exercises:](#exercises-5)
+  - [Object Oriented Programming](#object-oriented-programming)
+    - [Exercise](#exercise)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -685,5 +689,78 @@ Outputs:
 
 ### Interactions between Python Functions
 - Refer to the Notebook: `code/03-Methods and Functions/02-Functions.ipynb`
+
+### *args and **kwargs in Python
+- Stand for arguments and keyword arguments
+- Allows us to take an arbitrary number of arguments.
+
+```python
+def myfunc(*args):
+  print(args)
+  return sum(args) * 0.05
+```
+
+- `args` can be replaced with any other word like `*spam` etc. The `*` before the word is important.
+
+- `**kwargs` builds a dictionary of arguments.
+
+```python
+def myfunc(**kwargs):
+  print(kwargs)
+  if 'fruit` in kwargs:
+    print('My fruit of choice is {}'.format(kwargs['fruit']))
+  else
+    print('No fruit found')
+
+myfunc(fruit='apple', veggie = 'lettuce')
+```
+
+### Exercises:
+1. Write a function called myfunc that prints the string 'Hello World'.
+2. Define a function called myfunc that takes in a name, and prints 'Hello Name' 
+3. Define a function called myfunc that takes in a Boolean value (True or False). If True, return 'Hello', and if False, return 'Goodbye'
+4. Define a function called myfunc that takes three arguments, x, y and z.
+If z is True, return x.  If z is False, return y.
+5. Define a function called myfunc that takes in two arguments and returns their sum.
+6. Define a function called is_even that takes in one argument, and returns True if the passed-in value is even, False if it is not.
+7. Define a function called is_greater that takes in two arguments, and returns True if the first value is greater than the second, False if it is less than or equal to the second.
+8. Define a function called myfunc that takes in an arbitrary number of arguments, and returns the sum of those arguments.
+9. Define a function called myfunc that takes in an arbitrary number of arguments, and returns a list containing only those arguments that are even.
+10. Define a function called myfunc that takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase. Assume that the incoming string only contains letters, and don't worry about numbers, spaces or punctuation. The output string can start with either an uppercase or lowercase letter, so long as letters alternate throughout the string.
+
+## Object Oriented Programming
+- Object Oriented Programming (OOP) allows programmers to create their own objects that have methods and attributes.
+- Recall that after defining a string,list, dictionary, or other objects, you were able to call methods off of them with the .method_name() syntax.
+
+- These methods act as functions that use information about the object, as well as the object itself to return results, or change the current object.
+- For example this includes appending to a list, or counting the occurences of an element in a tuple.
+- OOP allows users to create their own objects.
+- The general format is often confusing when first encountered, and its usefulness may not be completely clear at first.
+- In general, OOP allows us to create code that is repeatable and organized.
+- For much larger scripts of Python code, functions by themselves aren’t enough for organization and repeatability.
+Commonly repeated tasks and objects can be defined with OOP to create code that is more usable.
+
+- Let’s check out the syntax.
+
+```
+class NameOfClass():
+	
+     				def __init__(self,param1,param2):
+		self.param1 = param1
+		self.param2 = param2
+	
+	def some_method(self):
+		# perform some action
+		print(self.param1)
+```
+
+- Let’s explore Object Oriented Programming in more detail with code!
+- Refer to the notebook at `code/05-Object Oriented Programming/01-Object Oriented Programming.ipynb`
+
+### Exercise
+- Problem statement is defined in the noteboo: `code/05-Object Oriented Programming/01-Object Oriented Programming.ipynb`
+
+
+
 
 
