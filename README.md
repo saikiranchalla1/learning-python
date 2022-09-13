@@ -670,7 +670,7 @@ def name_of_function():
 ```
 
 - Typically we use the return keyword to send back the result of the function, instead of just printing it out.
-- **return** allows us to assign the output of the function to a new variable. 
+- **return** allows us to assign the output of the function to a new variable.
 - We will have a deeper discussion of the return keyword later on in the notebook.
 ```
 def add_function(num1,num2):
@@ -679,7 +679,7 @@ def add_function(num1,num2):
 Outputs:
 ```
 >> result = add_function(1,2)
->> 
+>>
 >> print(result)
 >> 3
 ```
@@ -723,7 +723,7 @@ myfunc(fruit='apple', veggie = 'lettuce')
 
 ### Exercises:
 1. Write a function called myfunc that prints the string 'Hello World'.
-2. Define a function called myfunc that takes in a name, and prints 'Hello Name' 
+2. Define a function called myfunc that takes in a name, and prints 'Hello Name'
 3. Define a function called myfunc that takes in a Boolean value (True or False). If True, return 'Hello', and if False, return 'Goodbye'
 4. Define a function called myfunc that takes three arguments, x, y and z.
 If z is True, return x.  If z is False, return y.
@@ -750,11 +750,11 @@ Commonly repeated tasks and objects can be defined with OOP to create code that 
 
 ```
 class NameOfClass():
-	
+
      				def __init__(self,param1,param2):
 		self.param1 = param1
 		self.param2 = param2
-	
+
 	def some_method(self):
 		# perform some action
 		print(self.param1)
@@ -770,11 +770,11 @@ class NameOfClass():
 
 ## Modules and Packages
 ### Using PyPi With pip install
-- `PyPI` is a repository for open-source third-party Python packages. 
+- `PyPI` is a repository for open-source third-party Python packages.
 - It's similar to RubyGems in the Ruby world, PHP's Packagist, CPAN for Perl, and NPM for Node.js.
 - So far we’ve really only used libraries that come internally with Python.
 - There are many other libraries available that people have open-sourced and shared on `PyPi`.
-- We can use `pip install` at the command line to install these packages. 
+- We can use `pip install` at the command line to install these packages.
 - By installing Python from python.org or through the Anaconda distribution you also installed pip
 - `pip` is a simple way to download packages at your command line directly from the PyPi repository
 - There are packages already created for almost any use case you can think of!
@@ -784,7 +784,7 @@ class NameOfClass():
   - MacOS/Linux Users: Terminal
 
 ### Writing Your Own Modules and Packages
-- Now that we understand how to install external packages, let’s explore how to create our own modules and packages. 
+- Now that we understand how to install external packages, let’s explore how to create our own modules and packages.
 - Modules are just .py scripts that you call in another .py script.
 - Packages are a collection of modules.
 
@@ -798,7 +798,7 @@ if __name__ == "__main__":
 - Let’s explore this some more, but make sure to check out the full explanatory text file that is in this part’s folder!
 
 ## Errors and Exception Handling
-- Errors are bound to happen in your code! 
+- Errors are bound to happen in your code!
 - Especially when someone else ends up using it in an unexpected way.
 - We can use error handling to attempt to plan for possible errors.
 - For example, a user may try to write to a file that was only opened in mode=’r’
@@ -815,7 +815,17 @@ if __name__ == "__main__":
 - There are several testing tools, we will focus on two:
   - `pylint`: This is a library that looks at your code and reports back possible issues.
   - `unittest`: This built-in library will allow to test your own programs and check you are getting desired outputs.
-- We’ll begin by showing you how to use pylint to check your code for possible errors and styling. 
+- We’ll begin by showing you how to use pylint to check your code for possible errors and styling.
 - Python as a set of style convention rules known as “PEP 8”.
 - For this lecture we will be creating .py scripts in sublime.
 - You can still use the associated notebook for code using the %%writefile magic jupyter command.
+
+## Python Decorators
+- Refer to the slides: `slides/10-Python Decorators.pptx`
+
+## Python Generators
+- Refer to the slides: `slides/11-Python Generators.pptx`
+
+
+## Working with CSVs
+- Refer to the slides: `slides/PDFs and Spreadsheets.pptx`
