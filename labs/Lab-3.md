@@ -70,7 +70,7 @@ For most applications involving floating point, it’s simply not necessary (or 
 ## 3.2.	Performing Accurate Decimal Calculations
 ### Problem
 You need to perform accurate calculations with decimal numbers, and don’t want the small errors that naturally occur with floats.
- 
+
 ### Solution
 A well-known issue with floating-point numbers is that they can’t accurately represent all base-10 decimals. Moreover, even simple mathematical calculations introduce small errors. For example:
 
@@ -169,7 +169,7 @@ If you want to use exponential notation, change the f to an e or E, depending on
 ```
 
 The general form of the width and precision in both cases is '[<>^]?width[,]?(.dig its)?' where width and digits are integers and ? signifies optional parts. The same format codes are also used in the .format() method of strings. For example:
-``` 
+```
 >>> 'The value is {:0,.2f}'.format(x) 'The value is 1,234.57'
 >>>
 ```
@@ -202,7 +202,7 @@ In a lot of Python code, numbers are formatted using the % operator. For example
 
 ```
 This formatting is still acceptable, but less powerful than the more modern format() method. For example, some features (e.g., adding thousands separators) aren’t sup‐ ported when using the % operator to format numbers.
- 
+
 ## 3.4.	Working with Binary, Octal, and Hexadecimal Integers
 ### Problem
 You need to convert or output integers represented by binary, octal, or hexadecimal digits.
@@ -238,7 +238,7 @@ If you need to produce an unsigned value instead, you’ll need to add in the ma
 >>> x = -1234
 >>> format(2**32 + x, 'b') '11111111111111111111101100101110'
 >>> format(2**32 + x, 'x')
- 
+
 'fffffb2e'
 >>>
 ```
@@ -309,7 +309,7 @@ The specification of the byte order (little or big) just indicates whether the b
 >>> x = 0x01020304
 >>> x.to_bytes(4, 'big') b'\x01\x02\x03\x04'
 >>> x.to_bytes(4, 'little')
- 
+
 b'\x04\x03\x02\x01'
 >>>
 ```
@@ -320,14 +320,14 @@ If you try to pack an integer into a byte string, but it won’t fit, you’ll g
 >>> x 335381300113661875107536852714019056160355655333978849017944067
 >>> x.to_bytes(16, 'little') Traceback (most recent call last):
 File "<stdin>", line 1, in <module> OverflowError: int too big to convert
->>> x.bit_length() 
+>>> x.bit_length()
 208
 >>> nbytes, rem = divmod(x.bit_length(), 8)
 >>> if rem:
 ...	nbytes += 1
 ...
 >>>
->>> x.to_bytes(nbytes, 'little') 
+>>> x.to_bytes(nbytes, 'little')
 b'\x03X\xf1\x82iT\x96\xac\xc7c\x16\xf3\xb9\xcf...\xd0'
 >>>
 ```
@@ -349,7 +349,7 @@ Complex numbers can be specified using the complex(real, imag) function or by fl
 The real, imaginary, and conjugate values are easy to obtain, as shown here:
 
 ```
->>> a.real 
+>>> a.real
 2.0
 
 >>> a.imag 4.0
@@ -483,14 +483,14 @@ A subtle feature of NaN values is that they never compare as equal. For example:
 >>> d = float('nan')
 >>> c == d
 False
->>> c is d 
+>>> c is d
 False
 >>>
 ```
 
 Because of this, the only safe way to test for a NaN value is to use math.isnan(), as shown in this recipe.
 Sometimes programmers want to change Python’s behavior to raise exceptions when operations result in an infinite or NaN result. The fpectl module can be used to adjust this behavior, but it is not enabled in a standard Python build, it’s platform-dependent, and really only intended for expert-level programmers. See the online Python docu‐ mentation for further details.
- 
+
 ## 3.8.	Calculating with Fractions
 ### Problem
 
@@ -507,17 +507,17 @@ The fractions module can be used to perform mathematical calculations involving 
 
 >>> # Getting numerator/denominator
 >>> c = a * b
->>> c.numerator 
+>>> c.numerator
 35
->>> c.denominator 
+>>> c.denominator
 64
 
 >>> # Converting to a float
->>> float(c) 
+>>> float(c)
 0.546875
 
 >>> # Limiting the denominator of a value
->>> print(c.limit_denominator(8)) 
+>>> print(c.limit_denominator(8))
 4/7
 
 >>> # Converting a float to a fraction
@@ -615,7 +615,7 @@ array([[ 10.,	10.,	10., ...,	10.,	10.,	10.],
 [ 10.,	10.,	10., ...,	10.,	10.,	10.],
 [ 10.,	10.,	10., ...,	10.,	10.,	10.],
 [ 10.,	10.,	10., ...,	10.,	10.,	10.]])
->>> np.sin(grid)	
+>>> np.sin(grid)
 array([[-0.54402111,	-0.54402111, -0.54402111, ..., -0.54402111,
 -0.54402111,	-0.54402111],
 [-0.54402111,	-0.54402111, -0.54402111, ..., -0.54402111,
@@ -672,7 +672,7 @@ array([[ 1,  2,  3,  4],
 
 >>> # Conditional assignment on an array
 >>> np.where(a < 10, a, 10)
-array([[ 1,  2,  3,  4], 
+array([[ 1,  2,  3,  4],
 [ 5, 10, 10, 8],
 [ 9, 10, 10, 10]])
 >>>
@@ -767,15 +767,15 @@ The random module has various functions for random numbers and picking random it
 ```
 >>> import random
 >>> values = [1, 2, 3, 4, 5, 6]
->>> random.choice(values) 
+>>> random.choice(values)
 2
->>> random.choice(values) 
+>>> random.choice(values)
 3
->>> random.choice(values) 
+>>> random.choice(values)
 1
->>> random.choice(values) 
+>>> random.choice(values)
 4
->>> random.choice(values) 
+>>> random.choice(values)
 6
 >>>
 ```
@@ -808,35 +808,35 @@ If you simply want to shuffle items in a sequence in place, use random.shuffle()
 
 To produce random integers, use random.randint():
 ```
->>> random.randint(0,10) 
+>>> random.randint(0,10)
 2
->>> random.randint(0,10) 
+>>> random.randint(0,10)
 5
->>> random.randint(0,10) 
+>>> random.randint(0,10)
 0
->>> random.randint(0,10) 
+>>> random.randint(0,10)
 7
->>> random.randint(0,10) 
+>>> random.randint(0,10)
 10
->>> random.randint(0,10) 
+>>> random.randint(0,10)
 3
 >>>
 ```
 
 To produce uniform floating-point values in the range 0 to 1, use random.random():
 ```
->>> random.random() 
+>>> random.random()
 0.9406677561675867
->>> random.random() 
+>>> random.random()
 0.133129581343897
->>> random.random() 
+>>> random.random()
 0.4144991136919316
 >>>
 ```
 
 To get N random-bits expressed as an integer, use random.getrandbits():
 ```
->>> random.getrandbits(200) 
+>>> random.getrandbits(200)
 335837000776573622800628485064121869519521710558559406913275
 >>>
 ```
@@ -867,31 +867,31 @@ If you need to represent specific dates and times, create datetime instances and
 ```
 >>> from datetime import datetime
 >>> a = datetime(2012, 9, 23)
->>> print(a + timedelta(days=10)) 
+>>> print(a + timedelta(days=10))
 2012-10-03 00:00:00
 >>>
 >>> b = datetime(2012, 12, 21)
 >>> d = b - a
->>> d.days 
+>>> d.days
 89
 >>> now = datetime.today()
 >>> print(now)
 2012-12-21 14:54:43.094063
->>> print(now + timedelta(minutes=10)) 
+>>> print(now + timedelta(minutes=10))
 2012-12-21 15:04:43.094063
 >>>
 ```
 
 When making calculations, it should be noted that datetime is aware of leap years. For example:
-``` 
+```
 >>> a = datetime(2012, 3, 1)
 >>> b = datetime(2012, 2, 28)
 >>> a - b datetime.timedelta(2)
->>> (a - b).days 
+>>> (a - b).days
 2
 >>> c = datetime(2013, 3, 1)
 >>> d = datetime(2013, 2, 28)
->>> (c - d).days 
+>>> (c - d).days
 1
 >>>
 ```
@@ -902,16 +902,16 @@ For most basic date and time manipulation problems, the datetime module will suf
 To illustrate, many similar time calculations can be performed with the dateutil.rel ativedelta() function. However, one notable feature is that it fills in some gaps per‐ taining to the handling of months (and their differing number of days). For instance:
 ```
 >>> a = datetime(2012, 9, 23)
->>> a + timedelta(months=1) 
+>>> a + timedelta(months=1)
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 TypeError: 'months' is an invalid keyword argument for this function
 >>>
 
 >>> from dateutil.relativedelta import relativedelta
->>> a + relativedelta(months=+1) 
+>>> a + relativedelta(months=+1)
 datetime.datetime(2012, 10, 23, 0, 0)
->>> a + relativedelta(months=+4) 
+>>> a + relativedelta(months=+4)
 datetime.datetime(2013, 1, 23, 0, 0)
 >>>
 
