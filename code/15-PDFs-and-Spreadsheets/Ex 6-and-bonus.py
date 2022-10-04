@@ -23,7 +23,8 @@ csv_data = csv.reader(data)
 with open("example.csv",encoding='utf-8') as f:
     for line in f:
         row = line.split(",")
-        print(row)
+        print(row) # Get all data in all column
+        # print(row[1]) # Get all data in 2nd column
 # Does not understand \n as EOL in Windows
 
 # 6.1 cookbook
@@ -41,9 +42,12 @@ with open("example.csv",encoding='utf-8') as f:
 with open("practice_writeto.csv",'w',newline='',encoding='utf-8') as f:
     csv_data = csv.writer(f)
     csv_data.writerows([['this','is','a','header'],['this','is','first','row']])
-# For loop vs CSV reader
-# For loop work similary with CSV header with appropriate seperator
-# For loop may run into issue when a field in csv has a seperator symbol inside the field
-# Example: CSV reader can read this but not loop: field1, "field2, still field2", field3
-# Using for loop by itself won't parse \n as end of line on Windows
+with open("practice_writeto_otherway.csv",'w',newline='',encoding='utf-8') as f:
+    f.writelines("A,row")
+    
+# # For loop vs CSV reader
+# # For loop work similary with CSV header with appropriate seperator
+# # For loop may run into issue when a field in csv has a seperator symbol inside the field
+# # Example: CSV reader can read this but not loop: field1, "field2, still field2", field3
+# # Using for loop by itself won't parse \n as end of line on Windows
 
