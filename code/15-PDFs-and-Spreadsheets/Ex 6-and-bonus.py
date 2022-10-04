@@ -43,7 +43,10 @@ with open("practice_writeto.csv",'w',newline='',encoding='utf-8') as f:
     csv_data = csv.writer(f)
     csv_data.writerows([['this','is','a','header'],['this','is','first','row']])
 with open("practice_writeto_otherway.csv",'w',newline='',encoding='utf-8') as f:
-    f.writelines("A,row")
+    noOfRow=4
+    for i in range(noOfRow):
+        f.write("A,row,{}\n".format(i+1))
+        
     
 # # For loop vs CSV reader
 # # For loop work similary with CSV header with appropriate seperator
