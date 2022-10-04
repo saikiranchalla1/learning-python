@@ -20,15 +20,11 @@ data = open("example.csv",encoding='utf-8') # TextIOWrapper type
 csv_data = csv.reader(data)
 
 
-with open("example.csv",encoding='utf-8') as f:
-    for line in f:
-        row = line.split(",")
-        print(row) # Get all data in all column
-        # print(row[1]) # Get all data in 2nd column
-# Does not understand \n as EOL in Windows
+
 
 # 6.1 cookbook
 # Reader
+# CSV read/write
 with open("example.csv",encoding='utf-8') as f:
     csv_data = csv.reader(f, delimiter=',') # delimiter can be set to other characters (\t for TSV)
     header=next(csv_data)
@@ -37,11 +33,20 @@ with open("example.csv",encoding='utf-8') as f:
     for row in csv_data:
         print(row)
         # print(row[1]) # Get all data in 2nd column
-    
+# For loop
+with open("example.csv",encoding='utf-8') as f:
+    for line in f:
+        row = line.split(",")
+        print(row) # Get all data in all column
+        # print(row[1]) # Get all data in 2nd column
+# Does not understand \n as EOL in Windows
+#     
 # Writer:
+# With CSV read/write
 with open("practice_writeto.csv",'w',newline='',encoding='utf-8') as f:
     csv_data = csv.writer(f)
     csv_data.writerows([['this','is','a','header'],['this','is','first','row']])
+# With loop
 with open("practice_writeto_otherway.csv",'w',newline='',encoding='utf-8') as f:
     noOfRow=4
     for i in range(noOfRow):
