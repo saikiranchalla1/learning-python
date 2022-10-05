@@ -127,3 +127,6 @@ dmypy.json
 cython_debug/
 /my-work/
 .idea/
+*.txt
+*.json
+*.csv
